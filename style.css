@@ -1,0 +1,346 @@
+
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height:8vh;
+    background-color: #FFFFFF;
+    font-family: 'Noto Sans HK', sans-serif;
+   
+}
+
+
+
+.navbarLinks{
+        display: flex;
+        justify-content: space-around;
+        width: 40%;
+        
+        
+}
+
+.navbarLinks a{
+    text-decoration: none;
+    color: #686565;
+    letter-spacing: 4px;
+    font-size: 16px;
+    pointer-events: auto !important;  
+   cursor: pointer !important;
+}
+
+.navbarLinks li{
+    list-style: none;
+    
+}
+
+.burger {
+    display: none;
+}
+.burger div{
+    width: 25px;
+    height: 3px;
+    margin: 3px;
+    background-color: #ec3069;
+    transition: all 0.3s ease;
+    
+
+}
+
+@media screen and (max-width:1024px){
+  
+.navbarLinks{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+}
+@media screen and (max-width:850px){
+  
+    .navbarLinks{
+        position: absolute;
+        right: 0px;
+        height: 100%;
+        top: 41px;
+        background-color: rgb(72, 73, 73);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 9999;
+        position: fixed;     
+    }
+    .navbarLinks li{
+        opacity: 0;
+    }
+    .navbarLinks a{
+    color: #c2bfbf;
+    }
+    .burger{
+        display: block;
+        cursor: pointer;
+        position: fixed;
+        z-index: 9999;
+        
+    }
+    body{
+        font-family: 'Noto Sans HK', sans-serif;
+        color: #818181;
+        overflow-x:hidden;
+      }
+      .text{
+  
+        text-align: left;
+        margin-left: 0px!important;
+        margin-right: 0px!important;
+        }
+      .portfolio {
+        display: -ms-flexbox; /* IE10 */
+        display: flex;
+        -ms-flex-wrap: wrap; /* IE10 */
+        flex-wrap: wrap;
+        padding: 0 4px;
+            
+      }
+      .portImg{
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+      }
+     
+
+}
+
+
+.navbar-active{
+    transform: translateX(0%)
+}
+
+@keyframes navbarLinkFade{
+    from {
+        opacity: 0;
+        transform: translateX(50px)
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px)
+    }
+}
+
+.toggle .layer1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .layer2{
+    opacity: 0;
+}
+.toggle .layer3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    text-decoration: none;
+    color: #686565;
+    letter-spacing: 4px;
+    font-size: 16px;
+    pointer-events: auto !important;  
+   cursor: pointer !important;
+  
+  }
+  
+  .navbarLinks a:hover, .dropdown:hover .dropbtn {
+    color: rgb(144, 144, 144);
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    color: rgb(144, 144, 144);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: rgb(72, 73, 73);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: rgb(173, 171, 171);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    color: #cac7c7;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .logo{
+    height:150px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .logo img{
+    height:150px;
+    width: 200px;
+    margin-top: 60px;
+  }
+  .topImg{
+
+    background-image: url("img/mountain.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width:100%;
+    height:350px;
+    text-align: center;
+
+  }
+
+  body{
+    font-family: 'Noto Sans HK', sans-serif;
+    color: #686565;
+    background-color: #F1F1F1;
+    
+  }
+  .text{
+  
+  text-align: center;
+  margin-left: 150px;
+  margin-right: 150px;
+  }
+  body h1{
+      text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 22px;
+  }
+
+
+  .portfolio {
+    display: flex;
+    
+  }
+   h2{
+    font-family: 'Noto Sans HK', sans-serif;
+       font-size: 18px;
+       text-transform: uppercase;
+       letter-spacing: 4px;
+       font-size: 18px;
+       text-align: center;
+   }
+  .portImg{
+    flex: 33.33%;
+  padding: 30px;
+  position: relative;
+        display: inline-block;
+        
+        
+  }
+
+  .portImg:hover {
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+  .portImg .imgText h1{
+
+  
+    text-shadow: 4px 4px 16px #000000;
+} 
+  .portImg .imgText{
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 40%; /* Adjust this value to move the positioned div up and down */
+    text-align: center;
+    width: 100%; /* Set the width of the positioned div */
+    color: #FFFFFF;
+    overflow:hidden;
+   
+    
+  }
+
+
+
+  .aboutme{
+      background-color: #E0E0E0;
+      position: relative;
+      margin: 50px;
+      
+  }
+
+  .aboutme img{
+    border-radius: 50%;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 150px;
+  width: 150px;
+  }
+  
+  .socialLinks{
+    text-align: center;
+    display: block;
+  }
+  .socialLinks .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+    
+
+  }
+  
+  .socialLinks .fa:hover {
+      opacity: 0.7;
+    
+  }
+  .socialLinks .fa {
+    background: rgb(72, 73, 73);
+    color: white;
+  }
+
+  footer{
+    text-align: center;
+    word-spacing: 30px;
+    width: 100%;
+    
+  }
+  footer a{
+      
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #686565;
+    letter-spacing: 4px;
+    font-weight: bold;
+    font-size: 12px;
+    pointer-events: auto !important;  
+   cursor: pointer !important;
+   
+   
+  
+  }
+
+   footer img{
+       height: 100px;
+       width: 125px;
+
+   }
+ 
